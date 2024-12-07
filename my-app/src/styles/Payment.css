@@ -1,0 +1,150 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    
+    
+}
+
+.container_ {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.header {
+    text-align: center;
+    font-size: 36px;
+    color: #4e73df; /* Blue color */
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f5f5dc; /* Beige background */
+    border-radius: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-table th,
+.transaction-table td {
+    padding: 14px 18px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.transaction-table th {
+    background-color: #4e73df; /* Blue color */
+    color: white;
+    font-size: 18px;
+}
+
+.transaction-table td {
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+.transaction-table tr:nth-child(even) td {
+    background-color: #f9f9f9; /* Slightly different color for even rows */
+}
+
+.transaction-table tr:nth-child(odd) td {
+    background-color: #ffffff;
+}
+
+.transaction-table tr:hover td {
+    background-color: #e2e2e2; /* Light grey background on hover */
+    transition: background-color 0.3s ease;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.unpaid-btn {
+    background-color: #dc3545; /* Red color for unpaid status */
+}
+
+.unpaid-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.payment-section {
+    display: inline-block; /* Hide the payment section by default */
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    left: auto;
+}
+
+.payment-section h3 {
+    color: #4e73df;
+    margin-bottom: 20px;
+}
+
+.payment-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.payment-section label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.payment-section input {
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .header {
+        font-size: 28px;
+    }
+
+    .transaction-table th, .transaction-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

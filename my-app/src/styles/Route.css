@@ -1,0 +1,145 @@
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background-color: #1e1e2e; /* Dark background */
+    color: #ffffff; /* White text */
+    overflow: hidden; /* Prevent scrollbars */
+    position: relative;
+}
+
+/* New animation: Bounce-in for form */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5) translateY(-50%);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1) translateY(-50%);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateY(-50%);
+    }
+}
+
+/* New animation: Zoom-in for map */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8) translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(-50%);
+        opacity: 1;
+    }
+}
+
+/* Fade-in effect for labels */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container styling */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Form styling */
+.form-container {
+    width: 300px; /* Compact width */
+    background-color: #2e2e3e; /* Dark gray background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50px; /* Fixed on the left */
+    transform: translateY(-50%); /* Offset for vertical centering */
+    justify-content: space-between;
+    animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* New bounce-in animation */
+}
+
+.form-container h3 {
+    margin-bottom: 20px;
+    color: #c7b237; /* Gold color for the heading */
+    text-align: center;
+}
+
+.form-container input,
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px; /* Slightly smaller font size */
+}
+
+.form-container button {
+    background-color: #ff6f61; /* Vibrant coral for the button */
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #e05650; /* Slightly darker coral */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Map container styling */
+#map {
+    padding: 20px 50px 40px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 60%; /* Vertically center the map */
+    right:-850px; /* Align to the right */
+    transform: translateY(-50%); /* Offset to center vertically */
+    width: 250% ;/* Maximum width minus form width */
+    height:150%; /* Occupy most of the height */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add a soft shadow for depth */
+    border: 3px solid #1a180a; /* Gold border for visual distinction */
+    background-color:   #ecdfdf; /* Fallback color in case the map doesn't load */
+    animation: zoomIn 1.5s ease-out; /* New zoom-in animation */
+}
+
+/* Distance container styling */
+.distance-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.distance-label {
+    background-color: #44475a; /* Darker background for labels */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 6px;
+    font-size: 14px; /* Smaller font size for compact look */
+    font-weight: bold;
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+    animation: fadeIn 1s ease-in forwards; /* Subtle fade-in animation */
+    animation-delay: 0.5s; /* Delay for smooth sequencing */
+}
+
+
